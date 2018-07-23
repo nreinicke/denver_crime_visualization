@@ -1,0 +1,224 @@
+.intro {
+  color: #e1eef6;
+  text-align: center;
+}
+
+.intro h1{
+  font-size: 7em;
+}
+
+.intro h2{
+  font-size: 3em;
+}
+
+
+.bar{
+  fill: #004e66;
+  opacity: 0.8;
+}
+
+.bar:hover{
+  fill: #ff5f2e;
+  opacity: 0.8;
+}
+
+.city-boundary {
+  fill: #fff;
+  stroke: #888888;
+  stroke-linejoin: round;
+}
+
+.label{
+  fill: #000;
+}
+
+.fp-controlArrow.fp-prev {
+    left: 50px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #000 transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 50px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #000;
+}
+
+.event{
+  fill: #004e66;
+  stroke: #e1eef6;
+  stroke-width: 1px;
+  opacity: 0.8;
+  position: relative;
+}
+
+.event:hover {
+  fill: #ff5f2e;
+  cursor: pointer;
+  z-index: 9999;
+}
+
+#map_svg {
+  border: 1px solid #dddddd;
+}
+
+div.tooltip {
+  position: absolute;
+  background-color: #dddddd;
+  opacity: 0.9;
+  border: 1px solid #666666;
+  border-radius: 3px;
+  color: #000;
+  padding: 4px 8px;
+  display: none;
+}
+
+.container {
+    width: 950px;
+    height: 500px;
+    margin: auto;
+}
+
+.grid line {
+  stroke: lightgrey;
+  stroke-opacity: 0.7;
+  shape-rendering: crispEdges;
+}
+
+.grid path {
+  stroke-width: 0;
+}
+
+.text-right{
+  float: right;
+  width: 250px;
+  padding-top: 50px;
+  text-align: justify;
+}
+
+.text-calendar{
+  padding-top: 15px;
+  padding-left: 25px;
+  height: 300px;
+}
+
+p {
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.chart-left{
+  float: left;
+  width: 650px;
+}
+
+.column-header {
+  height: 55px;
+  width: 100%;
+  padding: 10px;
+}
+
+.column-left {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.column-right {
+  float: right;
+  width: 50%;
+  padding: 10px;
+}
+
+.ticks {
+  font-size: 10px;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #dcdcdc;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  stroke: transparent;
+  cursor: ew-resize;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+.circle_annotation {
+  fill: none;
+  stroke: #E53A40;
+  stroke-width: 2px;
+}
+
+.line_annotation {
+  fill: none;
+  stroke: #E53A40;
+  stroke-width: 2px;
+}
+
+.text_annotation{
+  fill: #E53A40;
+}
+.text-legend {
+  font-size: 0.7em;
+}
+
+#header{
+		position:fixed;
+		height: 40px;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+		text-align:left;
+		color: #f2f2f2;
+		padding: 10px 0 0 30px;
+    top: 0px;
+	}
+
+#header a{
+  color: #e1eef6;
+}
+
+.about_text{
+  font-size: 0.75em;
+}
+
+.date{
+  float:right;
+  padding-right: 20px;
+}
+
+a {
+  color: #ff5f2e;
+}
+
+a:hover {
+  color:  #004e66;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #ff5f2e;
+}

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="lib/fullpage.css" />
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+<body>
+  <div id="header"><a href="#about">About This Visualization</a></div>
+  <div id = "fullpage">
+    <div class="section">
+      <div class="intro">
+      <h1>Crime In Denver</h1>
+      <h2>A visualiztion by <a href="https://nickreinicke.space">Nick Reinicke</a></h2>
+    </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="text-right">
+        <p>
+          Crime is an unavoidable feature of any city. What does it look like in the
+          city of Denver, Colorado specifically? To answer this question, let's
+          take a look at all of the recorded crime between the years of 2013 and
+          2017 within the city limits. We'll begin by breaking out all of the
+          crime events by type. We see that the most common event is <i>Public Disorder</i>
+          and the least common event is <i>Murder</i> (this is much better than the
+          other way around). Hover over each bar to get the exact number of
+          recorded events.
+        </p>
+        </div>
+        <div class="chart-left" id="crime_by_type_chart">
+          <h3>Crime By Type (2013-2017)</h3>
+          <svg id="overview_svg" width="650" height="450"></svg>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="text-right">
+        <p>
+          Next, let's inspect how the prevalence of crime has varied over the
+          recorded time frame. To do this, we'll look at the ratio of the total
+          number of crime events to the population of Denver. Visualizing this
+          particular metric, we see that crime has actually decreased over the
+          time period of the year 2013 to 2017. Hover over each data point to
+          get the exact metric.
+        </p>
+        </div>
+        <div class="chart-left" id="crime_over_time_chart">
+          <h3>Crime Over Time (2013-2017)</h3>
+          <svg id="crime_over_time_svg" width="650" height="400"></svg>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="slide">
+        <div class="container">
+          <div id="legend_2013">
+            <h3>Crime Calendar (2013)</h3>
+          </div>
+          <div id="crime_calendar_2013">
+          </div>
+          <div class = "text-calendar">
+            <p>
+              Let's continue to look at crime over time but with a sharper
+              focus. To do this, the occurrence of crime events in the years 2013-2017
+              have been aggregated per day. Based
+              on this metric, a color has been assigned to each day with darker
+              colors representing more crimes occurring on that day. Some interesting
+              things to note: It appears that crime could be increasing during the
+              summer months. This trend is not apparent for the remainder of the years,
+              leading one to suspect that perhaps the certain crimes were not recorded
+              at the start of the year considering that this is the first year they
+              were recorded in this manner. Another interesting feature is that we
+              can clearly distinguish Christmas Day by it's markedly lighter color.
+              Criminals apparently have more important things to do on the holiday.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container">
+          <div id="legend_2014">
+            <h3>Crime Calendar (2014)</h3>
+          </div>
+          <div id="crime_calendar_2014">
+          </div>
+          <div class = "text-calendar">
+            <p>
+              Again, we can see that significantly less crime occurs on Christmas day.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container">
+          <div id="legend_2015">
+            <h3>Crime Calendar (2015)</h3>
+          </div>
+          <div id="crime_calendar_2015">
+          </div>
+          <div class = "text-calendar">
+            <p>
+              In 2015, we see similar trends for the Christmas and Thanksgiving.
+              Also note that there was significantly less crime recorded on February
+              22nd, 2015. I was unable to find a suitable explanation. I would love
+              to <a href="https://nickreinicke.space/contact/">hear</a> from any
+              reader that has a theory as to why this anomaly might appear.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container">
+          <div id="legend_2016">
+            <h3>Crime Calendar (2016)</h3>
+          </div>
+          <div id="crime_calendar_2016">
+          </div>
+          <div class = "text-calendar">
+            <p>
+              Note here that it appears the weekends experience marginally less
+              crime rates than the weekdays.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="slide">
+        <div class="container">
+          <div id="legend_2017">
+            <h3>Crime Calendar (2017)</h3>
+          </div>
+          <div id="crime_calendar_2017">
+          </div>
+          <div class = "text-calendar">
+            <p>
+              Finally, in 2017, we observe similar trends with respect to the previous
+              years. We see that the Thanksgiving and Christmas holidays are tied
+              to a significantly lower crime rate. In addition, we see bands of lower
+              crime rates on the the weekends. What other trends are visible?
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container">
+        <div class="chart-left">
+          <h3>Murder 😱</h3>
+          <div id="map_container"></div>
+          <div id="slider_container"></div>
+        </div>
+      <div class="text-right">
+        <p>
+          To wrap up our investigation let's dive into some of the dirty details.
+          We'll take a deeper look at the instances of murder that occurred in
+          Denver between 2013 and 2017. You can go forward or backward in time
+          using the slide below the map and you can zoom in for
+          more detail. Note that there are certain areas that can be distinguished by
+          a clear clusters of murders.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="container">
+      <div class="column-header"><h3>About This Visualization</h3></div>
+      <div class="column-left">
+        <h6>Narrative Structure</h6>
+        <p class="about_text">
+          The hybrid narrative structure chosen for this visualization is the interactive
+          slideshow structure. The users are presented with a series of scenes that they
+          can investigate in various ways. A visual template with a fixed color scheme is
+          used to maintain consistency.
+        </p>
+        <h6>Scenes</h6>
+        <p class="about_text">
+          This visualization has been organized into discrete scenes and allows
+          the viewer to scroll through all of the scenes from top to bottom
+          (the viewer can also click on the navigation bar to go directly to
+          a scene). Each scene presents a new dimension of the data and gives
+          the viewer details on demand in certain instances. The order was chosen
+          to give the user an overview and then dive down into interesting characteristics.
+        </p>
+        <h6>Annotations</h6>
+        <p class="about_text">
+          Annotations are used throughout the visualization to draw attention to
+          specific interesting elements. Each slide contains text that highlights
+          various aspects of the data that is being displayed. In addition,
+          certain slides have direct annotations to emphasize especially interesting
+          features of the data that are being displayed (the annotations are cleared
+          when the users moves from year to year). Finally, there are tooltips on
+          nearly all the visualizations that give the user more detail. These are presented
+          upon a mouseover event and removed upon a mouseout event.
+        </p>
+      </div>
+      <div class="column-right">
+        <h6>Parameters</h6>
+        <p class="about_text">
+          The use of parameters are most effectively demonstrated on the
+          <a href="#murder_map">murder map</a> scene. Here, the parameter of
+          <i>year</i> is used to filter each murder event that is being displayed
+          on the map. In addition, we could consider the scale of the map elements
+          to be a parameters that varies as the viewer zooms and pans the map.
+        </p>
+        <h6>Triggers</h6>
+        <p class="about_text">
+          Again, the use of triggers are best demonstrated on the
+          <a href="#murder_map">murder map</a> scene. Below the map is a slider
+          that allows the user to change the horizontal position of the handle.
+          By doing so, this event triggers the map to redraw the murder events
+          that are equal or less than the year indicated by the slider. In addition,
+          the user can scroll and click on the map which triggers the map to be
+          redrawn according to the appropriate scale.
+        </p>
+        <h6>Data</h6>
+        <p class="about_text">
+          The data for this project was sourced from the
+          <a href="https://www.denvergov.org/opendata/dataset/city-and-county-of-denver-crime">Denver Open Data Catalog</a>
+          and was cleaned and manipulated with python.
+    </div>
+  </div>
+  </div>
+  </div>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/topojson.v2.min.js"></script>
+<script type="text/javascript" src="lib/fullpage.js"></script>
+<script>
+
+var page = new fullpage('#fullpage', {
+  licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+  navigation: true,
+  anchors:['intro', 'crime_by_type', 'crime_over_time', 'crime_calendar', 'murder_map', 'about'],
+  sectionsColor: ['#004e66', '#fff', '#fff', '#fff', '#fff', '#fff'],
+  slidesNavigation: true
+});
+</script>
+<script src="js/crime_by_type.js"></script>
+<script src="js/crime_over_time.js"></script>
+<script src="js/crime_calendar.js"></script>
+<script src="js/map.js"></script>
+</body>
+</html>
